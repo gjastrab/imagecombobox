@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical"
+	            xmlns:sls="com.slslabs.flex.controls.*">
+	
+	<mx:Label text="This demonstrates using the ImageComboBox" />
+	
+	<sls:ImageComboBox width="60" paddingLeft="5" paddingTop="5" paddingBottom="5">
+		<sls:dataProvider>
+			<mx:Object url="http://www.iconarchive.com/icons/iconshock/mario-bros/mario-32x32.png" label="" />
+			<mx:Object url="http://www.iconarchive.com/icons/iconshock/mario-bros/luigui-32x32.png" label="" />
+			<mx:Object url="http://www.iconarchive.com/icons/iconshock/mario-bros/start-32x32.png" label="" />
+		</sls:dataProvider>
+		<sls:itemRenderer>
+			<mx:Component>
+				<mx:Image source="{data.url}" />
+			</mx:Component>
+		</sls:itemRenderer>
+	</sls:ImageComboBox>
+	
+</mx:Application>
