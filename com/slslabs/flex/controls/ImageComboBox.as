@@ -27,8 +27,14 @@ package com.slslabs.flex.controls {
          */
         protected var image:Image;
         
+        /**
+         * Measured width of the image.
+         */
         protected var imageMeasuredWidth:Number;
         
+        /**
+         * Measured height of the image.
+         */
         protected var imageMeasuredHeight:Number;
         
         /* === Variables === */
@@ -43,8 +49,6 @@ package com.slslabs.flex.controls {
                 image.focusEnabled = false;
                 
                 addChild(image);
-                
-                //image.move(getStyle("paddingLeft"), 0);
             }
         }
         
