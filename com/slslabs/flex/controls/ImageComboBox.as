@@ -18,9 +18,6 @@ package com.slslabs.flex.controls {
         /**
          * Property on the data object that holds the image location.
          * 
-         * <p>If the data object is a String the combo box will assume
-         * the String is pointing to a URL for an image.</p>
-         * 
          * @default url
          */
         public var imageDataField:String = "url";
@@ -63,10 +60,9 @@ package com.slslabs.flex.controls {
             
             if(selectedItem) {
             	var imageSourceURL:String;
-            	if(selectedItem is String) {
-            		imageSourceURL = selectedItem as String;
-            	}
-            	else if(selectedItem is Object && selectedItem[imageDataField]) {
+            	
+            	// TODO: allow a String to be the data object, and hide the label so [object Object] doesn't appear
+            	if(selectedItem && selectedItem[imageDataField]) {
             		imageSourceURL = selectedItem[imageDataField];
             	}
                 
